@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from 'framer-motion';
 
-const Game = ({name, released, image}) => {
+const Game = ({name, released, image, rating}) => {
   return (
     <StyledGame>
       <h3>{name}</h3>
-      <p>{released}</p>
+      <p>Rating: {rating}</p>
+      <p>Released date: {released}</p>
       <img src={image} alt={name} />
     </StyledGame>
   );
