@@ -1,23 +1,23 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { useDispatch } from "react-redux";
-import {loadDetail} from '../actions/detailAction';
+import { useDispatch } from 'react-redux';
+import { loadDetail } from '../actions/detailAction';
 
-const Game = ({name, released, image, rating, id}) => {
+const Game = ({ name, released, image, rating, id }) => {
   const dispatch = useDispatch();
   const loadHandler = () => {
-    dispatch(loadDetail(id))
-  }
+    dispatch(loadDetail(id));
+  };
   return (
-    <StyledGame>
+    <StyledGame onClick={loadHandler}>
       <h3>{name}</h3>
       <p>Rating: {rating}</p>
       <p>Released date: {released}</p>
       <img src={image} alt={name} />
     </StyledGame>
   );
-}
+};
 
 const StyledGame = styled(motion.div)`
   min-height: 30vh;
@@ -31,6 +31,6 @@ const StyledGame = styled(motion.div)`
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
-`
+`;
 
 export default Game;
