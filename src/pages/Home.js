@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import GameDetail from '../components/GameDetail';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadGames } from '../actions/gamesAction';
 import Game from '../components/Game';
 import styled from 'styled-components';
-import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
-import { fadeIn, popUp } from '../animations';
+import { fadeIn } from '../animations';
 
 const Home = () => {
   //Get the current location
