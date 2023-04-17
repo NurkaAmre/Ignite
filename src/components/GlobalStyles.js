@@ -44,6 +44,11 @@ const GlobalStyles = createGlobalStyle`
  img{
   display: block;
  }
+ input {
+  font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ff7676;
+ }
 `;
 
 export default GlobalStyles;
